@@ -15,7 +15,19 @@ require_once("config.php");
 //echo json_encode($usuarios);
 
 // Listar o usuario usando login e senha
+//$usuario = new Usuario();
+//$usuario->login("Willian Kaminski", "root");
+//echo $usuario;
+
+// Inserir novo usuario
+//$usuario = new Usuario("Eliana", "123");
+//$usuario->insert();
+//echo $usuario;
+
+
+// Alterar usuario
 $usuario = new Usuario();
-$usuario->login("root", "root");
+$usuario->loadById(6);
+$usuario->update("Maria Lucia","10/10");
 echo $usuario;
 ?>
